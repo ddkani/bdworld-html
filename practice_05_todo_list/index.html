@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나의 할 일 목록</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>오늘의 할 일</h1>
+            <time datetime="2024-03-20">2024년 3월 20일 수요일</time>
+        </header>
+
+        <section class="add-todo">
+            <h2>새로운 할 일 추가</h2>
+            <div class="input-group">
+                <input type="text" placeholder="할 일을 입력하세요" class="todo-input">
+                <select class="priority-select">
+                    <option value="high">높음</option>
+                    <option value="medium" selected>보통</option>
+                    <option value="low">낮음</option>
+                </select>
+                <button class="add-button">추가</button>
+            </div>
+        </section>
+
+        <main class="todo-sections">
+            <section class="todo-section">
+                <h2>오늘 할 일</h2>
+                <ul class="todo-list">
+                    <li class="todo-item priority-high">
+                        <input type="checkbox" id="todo1">
+                        <label for="todo1">프로젝트 기획서 작성</label>
+                        <span class="priority">높음</span>
+                        <button class="delete-btn">삭제</button>
+                    </li>
+                    <li class="todo-item priority-medium">
+                        <input type="checkbox" id="todo2">
+                        <label for="todo2">팀 미팅 참석 (오후 2시)</label>
+                        <span class="priority">보통</span>
+                        <button class="delete-btn">삭제</button>
+                    </li>
+                    <li class="todo-item priority-low">
+                        <input type="checkbox" id="todo3">
+                        <label for="todo3">이메일 확인 및 답장</label>
+                        <span class="priority">낮음</span>
+                        <button class="delete-btn">삭제</button>
+                    </li>
+                    <li class="todo-item priority-high">
+                        <input type="checkbox" id="todo4">
+                        <label for="todo4">코드 리뷰 - Feature/login 브랜치</label>
+                        <span class="priority">높음</span>
+                        <button class="delete-btn">삭제</button>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="todo-section">
+                <h2>이번 주 할 일</h2>
+                <ul class="todo-list">
+                    <li class="todo-item priority-medium">
+                        <input type="checkbox" id="todo5">
+                        <label for="todo5">월간 보고서 준비</label>
+                        <span class="priority">보통</span>
+                        <button class="delete-btn">삭제</button>
+                    </li>
+                    <li class="todo-item priority-low">
+                        <input type="checkbox" id="todo6">
+                        <label for="todo6">사무용품 주문하기</label>
+                        <span class="priority">낮음</span>
+                        <button class="delete-btn">삭제</button>
+                    </li>
+                    <li class="todo-item priority-high">
+                        <input type="checkbox" id="todo7">
+                        <label for="todo7">신규 프로젝트 킥오프 미팅</label>
+                        <span class="priority">높음</span>
+                        <button class="delete-btn">삭제</button>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="todo-section completed">
+                <h2>완료된 일</h2>
+                <ul class="todo-list">
+                    <li class="todo-item priority-medium completed">
+                        <input type="checkbox" id="todo8" checked>
+                        <label for="todo8">점심 약속 - 김과장님</label>
+                        <span class="priority">보통</span>
+                        <button class="delete-btn">삭제</button>
+                    </li>
+                    <li class="todo-item priority-low completed">
+                        <input type="checkbox" id="todo9" checked>
+                        <label for="todo9">운동하기 (30분 조깅)</label>
+                        <span class="priority">낮음</span>
+                        <button class="delete-btn">삭제</button>
+                    </li>
+                    <li class="todo-item priority-high completed">
+                        <input type="checkbox" id="todo10" checked>
+                        <label for="todo10">버그 수정 - 로그인 오류</label>
+                        <span class="priority">높음</span>
+                        <button class="delete-btn">삭제</button>
+                    </li>
+                </ul>
+            </section>
+        </main>
+
+        <section class="statistics">
+            <h2>오늘의 진행 상황</h2>
+            <div class="stat-container">
+                <div class="stat-item">
+                    <span class="stat-label">전체 할 일</span>
+                    <span class="stat-value">10개</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">완료된 일</span>
+                    <span class="stat-value">3개</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">완료율</span>
+                    <span class="stat-value">30%</span>
+                </div>
+            </div>
+            <div class="progress-bar">
+                <div class="progress" style="width: 30%"></div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
